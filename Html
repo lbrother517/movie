@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC
+  "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ar" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+    
+    <head>
+        
+        <script>
+        var NumberOfWords = 28
+
+var words = new BuildArray(NumberOfWords)
+
+// Use the following variables to 
+// define your random words:
+words [1] = "Hook"
+words [2] = "Kiki's Delivery Service"
+words [3] = "The Odyssey"
+words [4] = "Grosse Point Blank"
+words [5] = "Conan The Barbarian"
+words [6] = "Voyagers"
+words [7] = "Star Trek IV: Voyage Home"
+words [8] = "Snatch"
+words [9] = "Rock N Rolla"
+words [10] = "Princess Mononoke"
+words [11] = "Nausicaa of the Valley of  Wind"
+words [12] = "Dune (1984)"
+words [13] = "Kung Fury"
+words [14] = "Shaolin Soccer"
+words [15] = "Hardboiled"
+words [16] = "The Raid"
+words [17] = "Animal House"
+words [18] = "Blazing Saddles"
+words [19] = "Mystery Men"
+words [20] = "Cannonball Run"
+words [21] = "Rat Race"
+words [22] = "Maverick"
+words [23] = "Last Action Hero"
+words [24] = "Demolition Man"
+words [25] = "Star Trek VI: Undiscovered Country"
+words [26] = "Minority Report"
+words [27] = "Sanjuro"
+words [28] = "Yojimbo"
+
+
+function BuildArray(size){
+this.length = size
+for (var i = 1; i <= size; i++){
+this[i] = null}
+return this
+}
+
+function PickRandomWord(frm) {
+// Generate a random number between 1 and NumberOfWords
+var rnd = Math.ceil(Math.random() * NumberOfWords)
+
+// Display the word inside the text box
+frm.WordBox.value = words[rnd]
+}</script>
+        <style>
+        body {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1.2em;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 40px 10px;
+  line-height: 1.65em;
+  background: #B20940;
+        
+  color: #fff;
+  font-weight: 300;
+}
+
+h1 {
+  text-align: center;
+  margin: 20% 0 5% 0;
+}
+
+#moviebox {
+    /*opacity: 0;*/
+    margin: 30px auto 0;
+    display: block;
+    width: 400px;
+    height: 80px;
+    font-size: 30px;
+    text-align: center;
+    background: #fff;
+    border-radius: 6px;
+    color: black;
+    transition: 1s linear;
+}
+
+#button {
+  background: #0b7fba;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    padding: 1em 2em;
+    cursor: pointer;
+    margin: 0 auto 60px;
+    display: block;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: bold;
+}
+        </style>
+    </head> 
+<body>     
+ <h1>Random Movie Generator</h1>
+
+<form NAME="MovieForm">  
+<INPUT TYPE=TEXT NAME="WordBox" id="moviebox"/><BR>
+<INPUT TYPE=BUTTON VALUE="Generate" onClick="PickRandomWord(document.MovieForm);" id="button" />
+    </BR></form></body></html>
